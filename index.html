@@ -13,6 +13,11 @@
   ">
   <ol>
     <li><a onclick="
+      fetch('html').then(function(response){
+        response.text().then(function(text){
+          querySelector('article').text.innerHTML=text;
+        })
+      })
       document.querySelector('article').innerHTML='';
       ">HTML</a></li>
     <li><a href="2.html">CSS</a></li>

@@ -8,13 +8,15 @@
 </head>
 
 <body>
+    <!-- fetch('css.txt') : 서버로 요청
+    then(서버가 응답하면 실행될 함수) 서버가 응답할 떄까지 다른 것 수행 -->
     <input type="button" value="fetch" onclick="
-        fetch('css.txt').then(function(response){
+        fetch('html').then(function(response){
             response.text().then(function(text){
-                document.querySelector('article').innerHTML=text;
+                alert(text);
+                // document.querySelector('article').innerHTML=text;
             })
-        })
+        });
         ">
 </body>
-
 </html>
